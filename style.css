@@ -1,0 +1,850 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --cream: #f3e7cb;
+  --cream2: #e8d5ad;
+  --brown: #32170d;
+  --red: #64180f;
+  --gold: #d4a84e;
+  --ink: #2d1b12;
+  --green: #123526;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Noto Serif JP", serif;
+  background: var(--cream);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ヘッダー */
+
+.header {
+  height: 100px;
+  padding: 8px 5%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  position: relative;
+  z-index: 5;
+  color: #f8e8c5;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 2px, transparent 2px 34px),
+    linear-gradient(110deg, #230b05, #542414 48%, #260c06);
+  border-bottom: 4px double var(--gold);
+  box-shadow: 0 4px 10px #1b0b0670;
+}
+
+.logo {
+  width: 265px;
+  height: 90px;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+  background: linear-gradient(140deg, #671d13, #310b08);
+  border: 4px double #e2bd6b;
+  outline: 1px solid #e2bd6b;
+  outline-offset: -9px;
+  clip-path: polygon(5% 0,95% 0,100% 18%,100% 82%,95% 100%,5% 100%,0 82%,0 18%);
+  text-shadow: 1px 2px 3px #000;
+}
+
+.logo-cup {
+  font-size: 17px;
+}
+
+.logo-small {
+  font-size: 15px;
+  letter-spacing: 6px;
+}
+
+.logo strong {
+  font-family: "Kaisei Decol", serif;
+  font-size: 30px;
+  letter-spacing: 8px;
+  color: #f4dba5;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+}
+
+.nav a {
+  font-family: "Kaisei Decol", serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding: 12px 18px;
+  border-bottom: 1px solid #d6ad62;
+}
+
+.nav a:hover {
+  color: #f2c86e;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* メイン画像 */
+
+.hero {
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  background: #1d0c06;
+  border-bottom: 5px double var(--gold);
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  object-position: center 55%;
+  filter: brightness(.82) sepia(.12);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(20,7,3,.85),
+    rgba(20,7,3,.38) 38%,
+    transparent 78%
+  );
+}
+
+.hero-copy {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 330px;
+  text-align: center;
+  color: #f8e5b9;
+  text-shadow: 2px 3px 4px #170801;
+}
+
+.hero-copy p {
+  font-family: "Kaisei Decol", serif;
+  font-size: 27px;
+  letter-spacing: 5px;
+  margin: 4px;
+}
+
+.hero-copy h1 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 54px;
+  letter-spacing: 12px;
+  margin: 3px 0;
+}
+
+.hero-copy small {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.ornament {
+  color: #e6bd69;
+  font-size: 25px;
+  margin: 8px;
+}
+
+.hero-bottom {
+  position: absolute;
+  right: 24px;
+  bottom: 15px;
+  color: #f1d8a6;
+  font: 11px Georgia;
+  letter-spacing: 3px;
+  border: 1px solid #c99c4d;
+  padding: 5px 10px;
+}
+
+/* クリーム色の紙背景 */
+
+.paper-section {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(ellipse at 15% 20%, #fff9e5a0, transparent 55%),
+    repeating-linear-gradient(0deg, #6c451008 0 1px, transparent 1px 5px);
+}
+
+/* お店について */
+
+.about {
+  min-height: 220px;
+  padding: 22px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 90px;
+  gap: 28px;
+  align-items: center;
+  border-bottom: 3px double #a77a3e;
+}
+
+.framed-photo {
+  padding: 7px;
+  background: #ead8b3;
+  border: 1px solid #96703c;
+  box-shadow: 3px 5px 10px #38210f40;
+}
+
+.about-photo {
+  height: 180px;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-photo img,
+.master-photo img {
+  filter: sepia(.2) saturate(.88);
+}
+
+.about-copy {
+  text-align: center;
+}
+
+.about-copy h2,
+.section-title h2 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 25px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.about-copy h2 span {
+  font-size: 16px;
+}
+
+.about-copy p {
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 7px 0;
+}
+
+.ornate-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 34px;
+  color: #fff0d1;
+  background: linear-gradient(#852b19, #4b1009);
+  border: 3px double #d8ae59;
+  outline: 1px solid #6e311b;
+  box-shadow: 2px 3px 5px #0003;
+}
+
+.gramophone {
+  font-size: 62px;
+  color: #8d542b;
+  text-align: center;
+  text-shadow: 2px 2px #d4ad6c;
+}
+
+/* メニュー */
+
+.menu-section {
+  padding: 20px 5% 30px;
+  color: #f6e5bd;
+  background:
+    repeating-linear-gradient(90deg, #ffffff05 0 2px, transparent 2px 38px),
+    linear-gradient(110deg, #5a170f, #260906 50%, #56150e);
+  border-top: 4px double var(--gold);
+  border-bottom: 4px double var(--gold);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-title > span {
+  width: 120px;
+  border-top: 2px solid currentColor;
+  position: relative;
+}
+
+.section-title > span:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 10%;
+  width: 80%;
+  border-top: 1px solid currentColor;
+}
+
+.section-title h2 {
+  margin: 0;
+}
+
+.dark-title {
+  color: #f4dfad;
+}
+
+.dark-title h2 {
+  font-size: 31px;
+  letter-spacing: 9px;
+}
+
+.menu-cards {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.menu-card {
+  position: relative;
+  padding: 7px 7px 0;
+  border: 4px double #e6b74d;
+  border-radius: 13px;
+  background: #250b06;
+  box-shadow: 0 4px 9px #0008;
+  text-align: center;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  background: transparent;
+  border-radius: 7px;
+  filter: sepia(.12) saturate(.95);
+}
+
+.menu-card strong {
+  display: block;
+  position: relative;
+  margin: -5px auto 0;
+  width: 75%;
+  padding: 5px 3px;
+  color: #f6e3b9;
+  background: #65170f;
+  border: 3px double #dcb354;
+  border-radius: 20px;
+  font-family: "Kaisei Decol", serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.menu-list {
+  max-width: 850px;
+  margin: 28px auto 0;
+  padding: 18px 28px;
+  color: #3b2416;
+  background: #f3e7ca;
+  border: 5px double #b58b4c;
+}
+
+.menu-list h3 {
+  text-align: center;
+  font-family: "Kaisei Decol", serif;
+  letter-spacing: 5px;
+  margin: 0 0 10px;
+}
+
+.menu-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.menu-list p {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  padding: 7px 0;
+  border-bottom: 1px dotted #a88b60;
+  font-size: 12px;
+}
+
+.menu-list p span {
+  white-space: nowrap;
+  color: #76251b;
+  font-size: 10px;
+}
+
+.menu-list > small {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 10px;
+}
+
+/* お知らせ */
+
+.news {
+  padding: 25px 8%;
+  position: relative;
+  border-bottom: 1px solid #b99b6a;
+}
+
+.news-board {
+  max-width: 760px;
+  margin: auto;
+  border: 2px solid #9c713d;
+  padding: 4px 18px;
+}
+
+.news-board a {
+  display: grid;
+  grid-template-columns: 130px 1fr 20px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dotted #b99b6a;
+  font-size: 13px;
+}
+
+.news-board a:last-child {
+  border: 0;
+}
+
+.news-board time {
+  font-family: Georgia, serif;
+}
+
+.news-board b {
+  font-size: 23px;
+  color: #742219;
+}
+
+.coffee-grinder {
+  position: absolute;
+  right: 5%;
+  bottom: 12px;
+  color: #87522c;
+  font-size: 45px;
+}
+
+/* マスター */
+
+.master {
+  padding: 25px 6%;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 35px;
+  align-items: center;
+  border-bottom: 1px solid #b99b6a;
+}
+
+.master-photo {
+  height: 260px;
+}
+
+.master-photo img {
+  object-fit: contain;
+  background: #241209;
+}
+
+.master-copy {
+  text-align: center;
+}
+
+.master-copy .section-title {
+  margin-bottom: 12px;
+}
+
+.master-copy .section-title h2 {
+  font-size: 23px;
+}
+
+.master-copy p {
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 8px;
+}
+
+.signature {
+  text-align: right;
+  color: #7a2419;
+  font-family: "Kaisei Decol", serif;
+  font-weight: 700;
+  margin: 12px 5% 0;
+}
+
+/* アクセス */
+
+.access {
+  padding: 25px 8% 35px;
+}
+
+.access-grid {
+  max-width: 820px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.map-box {
+  height: 145px;
+  position: relative;
+  overflow: hidden;
+  border: 5px double #a17a48;
+  background:
+    linear-gradient(25deg, transparent 46%, #fff5df 47% 51%, transparent 52%),
+    linear-gradient(115deg, transparent 43%, #fff5df 44% 49%, transparent 50%),
+    #d6c39e;
+}
+
+.map-road {
+  position: absolute;
+  background: #fff3dc;
+  height: 8px;
+  width: 140%;
+  left: -20%;
+  top: 40%;
+  transform: rotate(-18deg);
+}
+
+.road-two {
+  top: 68%;
+  transform: rotate(14deg);
+}
+
+.road-three {
+  top: 20%;
+  transform: rotate(68deg);
+  width: 90%;
+  left: 10%;
+}
+
+.map-pin {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  color: #bd321e;
+  font-size: 31px;
+  text-shadow: 1px 2px #fff;
+}
+
+.map-box small {
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+  background: #f5e9d0;
+  padding: 2px 6px;
+  font-size: 9px;
+}
+
+.access-info p {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  gap: 8px;
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px dotted #a88b60;
+  font-size: 12px;
+}
+
+.access-info b {
+  color: #742219;
+}
+
+/* お問い合わせ */
+
+.contact-section {
+  padding: 18px 7% 25px;
+  background: #e4d0a8;
+}
+
+.contact-board {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+  padding: 15px 20px;
+  color: #f6e8c8;
+  background:
+    repeating-linear-gradient(90deg, #ffffff06 0 2px, transparent 2px 32px),
+    linear-gradient(110deg, #1d4933, #0c281d);
+  border: 5px double #d5ad5d;
+  outline: 1px solid #6d4c24;
+  outline-offset: -10px;
+  box-shadow: 0 4px 9px #38200d40;
+}
+
+.telephone {
+  font-size: 24px;
+  color: #e5c87f;
+}
+
+.contact-board h2 {
+  font-family: "Kaisei Decol", serif;
+  letter-spacing: 4px;
+  font-size: 23px;
+  margin: 0;
+}
+
+.contact-board p {
+  font-size: 12px;
+  margin: 8px;
+}
+
+.contact-board a {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 7px 30px;
+  background: #f4e8c9;
+  color: #2e2418;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* フッター */
+
+.footer {
+  padding: 20px 5%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  color: #f2dfb9;
+  background:
+    repeating-linear-gradient(90deg, #ffffff05 0 2px, transparent 2px 36px),
+    linear-gradient(110deg, #260c06, #542113, #250b06);
+  border-top: 4px double #c99c4e;
+}
+
+.footer-name {
+  font-family: "Kaisei Decol", serif;
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 12px;
+}
+
+.footer small {
+  font-size: 10px;
+  color: #d2b98e;
+}
+
+/* スマートフォン */
+
+@media (max-width: 760px) {
+  .header {
+    height: 82px;
+    padding: 6px 15px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 175px;
+    height: 70px;
+  }
+
+  .logo strong {
+    font-size: 23px;
+  }
+
+  .logo-small {
+    font-size: 12px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid var(--gold);
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #f5dfb5;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 12px 22px;
+    background: #32140b;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 15px;
+    border-bottom: 1px solid #81502d;
+  }
+
+  .hero {
+    height: 390px;
+  }
+
+  .hero-copy {
+    left: 0;
+    width: 260px;
+  }
+
+  .hero-copy p {
+    font-size: 21px;
+  }
+
+  .hero-copy h1 {
+    font-size: 43px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px 7%;
+  }
+
+  .about-photo {
+    height: 190px;
+  }
+
+  .gramophone {
+    display: none;
+  }
+
+  .menu-cards {
+    gap: 10px;
+  }
+
+  .menu-card img {
+    height: 105px;
+  }
+
+  .menu-card strong {
+    font-size: 11px;
+    letter-spacing: 1px;
+    width: 90%;
+  }
+
+  .menu-list {
+    padding: 15px;
+  }
+
+  .menu-list-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .news-board a {
+    grid-template-columns: 100px 1fr 15px;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .coffee-grinder {
+    display: none;
+  }
+
+  .master {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .master-photo {
+    height: 190px;
+  }
+
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer nav {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-cards {
+    grid-template-columns: 1fr;
+    max-width: 290px;
+  }
+
+  .menu-card img {
+    height: 155px;
+  }
+
+  .menu-card strong {
+    font-size: 15px;
+  }
+
+  .hero-copy {
+    width: 230px;
+  }
+
+  .hero-copy h1 {
+    font-size: 38px;
+  }
+
+  .news-board a {
+    grid-template-columns: 1fr 18px;
+  }
+
+  .news-board time,
+  .news-board strong {
+    grid-column: 1;
+  }
+
+  .news-board b {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .section-title > span {
+    width: 55px;
+  }
+}

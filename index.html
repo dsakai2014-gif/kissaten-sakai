@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="昔ながらの小さな純喫茶、喫茶店 さかい。">
+  <title>喫茶店 さかい｜昔ながらの純喫茶</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <a class="logo" href="#top" aria-label="喫茶店 さかい トップ">
+      <span class="logo-cup">☕</span>
+      <span class="logo-small">喫 茶 店</span>
+      <strong>さかい</strong>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#top">トップ</a>
+      <a href="#menu">メニュー</a>
+      <a href="#about">お店について</a>
+      <a href="#access">アクセス</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img class="hero-photo" src="images/hero-kissaten.jpg" alt="赤いソファと木のテーブルがある昔ながらの喫茶店">
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <div class="ornament">❧　✧　❧</div>
+        <p>時がゆっくり流れる</p>
+        <p>昔ながらの</p>
+        <h1>喫茶店</h1>
+        <div class="ornament">❧　✧　❧</div>
+        <small>一杯のコーヒーに、心を込めて。</small>
+      </div>
+      <div class="hero-bottom">COFFEE &amp; TEA　SINCE 19XX</div>
+    </section>
+
+    <section class="about paper-section" id="about">
+      <div class="about-photo framed-photo">
+        <img src="images/interior.jpg" alt="赤いソファとステンドグラスのランプがある店内">
+      </div>
+      <div class="about-copy">
+        <h2><span>―</span> お店について <span>―</span></h2>
+        <p>昔ながらの雰囲気を大切にした、<br>どこか懐かしい喫茶店です。</p>
+        <p>こだわりのコーヒーと、<br>手づくりの軽食・スイーツで<br>ゆったりとした時間をお過ごしください。</p>
+        <a class="ornate-button" href="#master">詳しく見る ›</a>
+      </div>
+      <div class="gramophone" aria-hidden="true">♫</div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-title dark-title">
+        <span></span><h2>メニュー</h2><span></span>
+      </div>
+
+      <div class="menu-cards">
+        <a class="menu-card" href="#menu-list">
+          <img src="images/coffee.jpg" alt="昔ながらのコーヒーカップ">
+          <strong>☙　コーヒー　❧</strong>
+        </a>
+        <a class="menu-card" href="#menu-list">
+          <img src="images/pudding.jpg" alt="昔ながらの固めプリン">
+          <strong>☙　スイーツ　❧</strong>
+        </a>
+        <a class="menu-card" href="#menu-list">
+          <img src="images/sandwich.jpg" alt="たまごや野菜のサンドイッチ">
+          <strong>☙　軽 食　❧</strong>
+        </a>
+      </div>
+
+      <div class="menu-list" id="menu-list">
+        <h3>喫茶店のお品書き</h3>
+        <div class="menu-list-grid">
+          <div>
+            <p>ブレンドコーヒー <span>価格は店頭にて</span></p>
+            <p>アイスコーヒー <span>価格は店頭にて</span></p>
+            <p>クリームソーダ <span>価格は店頭にて</span></p>
+          </div>
+          <div>
+            <p>昔ながらのプリン <span>価格は店頭にて</span></p>
+            <p>たまごサンド <span>価格は店頭にて</span></p>
+            <p>ナポリタン <span>価格は店頭にて</span></p>
+          </div>
+        </div>
+        <small>※ メニュー・価格は実際のお店に合わせて変更してください。</small>
+      </div>
+    </section>
+
+    <section class="news paper-section">
+      <div class="section-title">
+        <span></span><h2>お知らせ</h2><span></span>
+      </div>
+      <div class="news-board">
+        <a href="#news"><time>2026.11.01</time><strong>季節のおすすめメニューのお知らせ</strong><b>›</b></a>
+        <a href="#news"><time>2026.10.20</time><strong>営業時間についてのお知らせ</strong><b>›</b></a>
+      </div>
+      <div class="coffee-grinder" aria-hidden="true">⚙</div>
+    </section>
+
+    <section class="master paper-section" id="master">
+      <div class="master-photo framed-photo">
+        <img src="images/master.jpg" alt="サイフォンでコーヒーを淹れる年配のマスター">
+      </div>
+      <div class="master-copy">
+        <div class="section-title"><span></span><h2>マスターより</h2><span></span></div>
+        <p>毎日、いつものように豆を挽き、<br>一杯ずつ丁寧にコーヒーを淹れています。</p>
+        <p>ここで過ごす時間が、皆さまにとって<br>ほっとできるひとときになりますように。</p>
+        <div class="signature">喫茶店 さかい 店主</div>
+      </div>
+    </section>
+
+    <section class="access paper-section" id="access">
+      <div class="section-title"><span></span><h2>アクセス</h2><span></span></div>
+      <div class="access-grid">
+        <div class="map-box">
+          <div class="map-road road-one"></div>
+          <div class="map-road road-two"></div>
+          <div class="map-road road-three"></div>
+          <span class="map-pin">●</span>
+          <small>地図を掲載する場所</small>
+        </div>
+        <div class="access-info">
+          <p><b>住所</b><span>住所を入力してください</span></p>
+          <p><b>営業時間</b><span>9:00 ～ 18:00（仮）</span></p>
+          <p><b>定休日</b><span>定休日を入力してください</span></p>
+          <p><b>TEL</b><span>電話番号を入力してください</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-board">
+        <div class="telephone">☎</div>
+        <h2>お問い合わせ・ご予約</h2>
+        <p>ご予約やお席の確認など、お気軽にご連絡ください。</p>
+        <a href="mailto:メールアドレスを入力してください">お問い合わせする ›</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#top" class="footer-name">喫茶店 さかい</a>
+    <nav>
+      <a href="#top">トップ</a>
+      <a href="#menu">メニュー</a>
+      <a href="#about">お店について</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <small>© <span id="year"></span> 喫茶店 さかい All Rights Reserved.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
